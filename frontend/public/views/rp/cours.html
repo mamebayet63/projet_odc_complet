@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cours- École 221</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+        <!-- Icônes Heroicons -->
+        <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['poppins', 'sans-serif']
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.0.0/remixicon.min.css" integrity="sha384-U5SeXb5CllCmI9DE/z9XKsEC5RPh8XmPoxvb5zF70h1GRAK2oymyXBy4x62wLydh" crossorigin="anonymous">
+        <title>Sidebar</title>
+    </head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
+      <div id="sidebar-container"></div> <!-- Conteneur pour le composant JS -->
+  
+      <div class="flex-1 ml-72 px- space-y-">
+        <div id="header-container"></div>
+        <section class="px-6 py-24 space-y-3">
+            
+                    <!-- Contenu principal -->
+                    <main>
+                        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-4 py-8 bg-white/50 p-4 backdrop-blur-lg rounded-2xl">
+                           
+            
+             
+                            <div class="min-h-screen bg-gray-50 p-8">
+                                <!-- Header -->
+                                <div class="mb-8">
+                                  <h1 class="text-xl font-bold text-gray-800">Gestion Éducative</h1>
+                                  <p class="text-gray-600 mt-2 text-sm">Programme de formation continue pour administrateurs scolaires</p>
+                                </div>
+                              
+                                <!-- Filtres -->
+                                <div class="mb-6 flex flex-wrap gap-4">
+                                  <button class="px-4 py-2 bg-red-600 text-sm text-white rounded-full hover:bg-red-700 transition-colors">Tous</button>
+                                  <button class="px-4 py-2 bg-gray-100 text-sm  text-gray-600 rounded-full hover:bg-gray-200 transition-colors">Administration</button>
+                                  <button class="px-4 py-2 bg-gray-100 text-sm  text-gray-600 rounded-full hover:bg-gray-200 transition-colors">Pédagogie</button>
+                                  <button class="px-4 py-2 bg-gray-100 text-sm  text-gray-600 rounded-full hover:bg-gray-200 transition-colors">Finances</button>
+                                </div>
+                              
+                                <!-- Liste des cours -->
+                                <div id="courses-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Les cours seront injectés ici dynamiquement -->
+                                  </div>
+                                  
+                                  <!-- Conteneur pour l’image d’erreur -->
+                                  <div id="empty-state" class="hidden text-center py-16">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/7486/7486776.png" alt="Aucun cours" class="w-32 h-32 mx-auto mb-4">
+                                    <p class="text-gray-600 text-sm">Aucun cours disponible pour le moment.</p>
+                                  </div>
+                                  
+                              </div>
+
+                        </div>              
+                        <!-- Répéter d'autres cartes de classe -->
+                        <div id="pagination-controls"></div>
+                        </div>
+                        </div>
+                    </main>
+                </div>   
+        </section>
+      </div>
+    </div>
+
+
+     
+    </div>
+</div>
+  <!-- modal pour supprimer -->
+  <div id="confirmDeleteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded shadow-md text-center">
+      <p>Es-tu sûr de vouloir supprimer cet élément ?</p>
+      <div class="mt-4">
+        <button id="confirmDeleteBtn" class="bg-red-500 text-white px-4 py-2 rounded mr-2">Supprimer</button>
+        <button id="cancelDeleteBtn" class="bg-gray-300 px-4 py-2 rounded">Annuler</button>
+      </div>
+    </div>
+  </div>
+    <script src="../../../js/components/sidebar.js"></script>
+    <script src="../../../js/components/headerRp.js" type="module"></script>
+    <script type="module" src="../../../js/rp/cours/coursRp.js"></script>
+  </body>
+  
+</html>

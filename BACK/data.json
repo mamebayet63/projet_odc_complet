@@ -1,0 +1,204 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "rp@ecole221.sn",
+      "password": "aaaaa",
+      "matricule": "Rp-E221-001",
+      "role": "rp"
+    },
+    {
+      "id": "2",
+      "email": "attache@ecole221.sn",
+      "password": "attache1234",
+      "matricule": "Attache-E221-001",
+      "role": "attache"
+    },
+    {
+      "id": "3",
+      "email": "student1@ecole221.sn",
+      "password": "student1234",
+      "matricule": "STUD-E221-001",
+      "role": "student"
+    },
+    {
+      "id": "4",
+      "email": "prof2@ecole221.sn",
+      "password": "azerty",
+      "matricule": "PROF-E221-081",
+      "role": "prof"
+    },
+    {
+      "id": "fb46",
+      "email": "llll@gmail.com",
+      "password": "moi",
+      "matricule": "PROF-E221-836",
+      "role": "prof"
+    },
+    {
+      "id": "f777",
+      "email": "prof@gmail.com",
+      "password": "prof",
+      "matricule": "PROF-E221-887",
+      "role": "prof"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "userId": "3",
+      "firstName": "Alioune",
+      "lastName": "Diop",
+      "classId": 1
+    },
+    {
+      "id": "2",
+      "userId": "4",
+      "firstName": "Fatou",
+      "lastName": "Ndiaye",
+      "classId": 1
+    }
+  ],
+  "rp": [
+    {
+      "id": "1",
+      "userId": "1",
+      "firstName": "Fatima",
+      "lastName": "Niang",
+      "avatar": "https://img.freepik.com/free-photo/portrait-ethnic-curly-young-woman-colored-background_23-2148183326.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740"
+    }
+  ],
+  "prof": [
+    {
+      "id": "1",
+      "userId": "4",
+      "firstName": "Mme",
+      "lastName": "Niass",
+      "etat": "actif",
+      "Spécialite": "Informatque",
+      "avatar": "https://img.freepik.com/free-photo/portrait-ethnic-curly-young-woman-colored-background_23-2148183326.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740"
+    },
+    {
+      "id": "3877",
+      "userId": "fb46",
+      "firstName": "new",
+      "lastName": "new",
+      "avatar": "https://img.freepik.com/free-photo/business-man-banner-concept-with-copy-space_23-2149601521.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740",
+      "etat": "actif"
+    },
+    {
+      "id": "d139",
+      "userId": "f777",
+      "firstName": "new",
+      "lastName": "prof",
+      "avatar": "https://img.freepik.com/premium-photo/young-smart-black-woman-wearing-glasses_1048944-4417247.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740",
+      "Spécialite": "informatique",
+      "etat": "actif"
+    }
+  ],
+  "attache": [
+    {
+      "id": "1",
+      "userId": "2",
+      "firstName": "Mme",
+      "lastName": "Niass"
+    }
+  ],
+  "classes": [
+    {
+      "id": "1",
+      "name": "L1 Info",
+      "id_filiere": "2",
+      "niveau": "L1",
+      "etat": "actif"
+    },
+    {
+      "id": "9674",
+      "name": "new",
+      "niveau": "L1",
+      "id_filiere": 1,
+      "etat": "actif"
+    },
+    {
+      "id": "dae0",
+      "name": "new 2",
+      "niveau": "L1",
+      "id_filiere": "1",
+      "etat": "actif"
+    },
+    {
+      "id": "3777",
+      "name": "new 45",
+      "niveau": "L2",
+      "id_filiere": "1",
+      "etat": "actif"
+    },
+    {
+      "id": "0bb9",
+      "name": "test",
+      "niveau": "L1",
+      "id_filiere": "1",
+      "etat": "actif"
+    }
+  ],
+  "filiere": [
+    {
+      "id": "1",
+      "libelle": "Filière 1",
+      "etat": "actif"
+    },
+    {
+      "id": "2",
+      "libelle": "Filière 2",
+      "etat": "actif"
+    }
+  ],
+  "inscription": [
+    {
+      "id": "1",
+      "id_etudiant": "2",
+      "id_classe": "1",
+      "annee": "2025",
+      "date_inscription": "31/03/2025",
+      "etat": "actif"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "id_module": 1,
+      "date": "2025-04-20",
+      "heure_debut": "10:00",
+      "heure_fin": "12:00",
+      "proffesseur_id": 1,
+      "salle": "sale B12",
+      "semestre": "S1",
+      "etat": "actif"
+    }
+  ],
+  "absences": [
+    {
+      "id": "1",
+      "studentId": 1,
+      "date": "2025-05-01",
+      "courseId": 1,
+      "justified": false
+    }
+  ],
+  "justifications": [
+    {
+      "id": "1",
+      "absenceId": 1,
+      "reason": "Maladie",
+      "validatedBy": "2"
+    }
+  ],
+  "modules": [
+    {
+      "id": "1",
+      "libelle": "Module 1",
+      "id_filiere": 1,
+      "etat": "actif"
+    }
+  ]
+}

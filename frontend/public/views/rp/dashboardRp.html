@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard RP - École 221</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+        <!-- Icônes Heroicons -->
+        <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['poppins', 'sans-serif']
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.0.0/remixicon.min.css" integrity="sha384-U5SeXb5CllCmI9DE/z9XKsEC5RPh8XmPoxvb5zF70h1GRAK2oymyXBy4x62wLydh" crossorigin="anonymous">
+        <title>Sidebar</title>
+    </head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
+      <div id="sidebar-container"></div> <!-- Conteneur pour le composant JS -->
+  
+      <div class="flex-1 ml-72 px- space-y-8"">
+        <div id="header-container"></div>
+        <section class="px-6 py-24 space-y-8">
+            <!-- En-tête et actions -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 ">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Bienvenue, <span class="text-red-600"> Monsieur Diallo</span></h1>
+                    <p class="text-gray-500 mt-2">Voici votre synthèse du jour</p>
+                </div>
+                <div class="flex items-center gap-3 ">
+                    <button class="flex items-center gap-2 px-4 py-2.5 bg-ecole-red text-white rounded-xl border border-red-500  hover:bg-red-700 transition-all">
+                        <span class="text-red-600 hover:text-white">Nouvel étudiant</span>
+                    </button>
+                    
+                </div>
+            </div>
+        
+            <!-- Cartes de statistiques -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Carte Étudiants -->
+                <div class="bg-white/80 backdrop-blur-sm border-b border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-500 text-sm">Étudiants inscrits</p>
+                            <p class="text-3xl font-bold mt-2" id="student-count">0</p>
+                            <div class="flex items-center gap-1 mt-3 text-sm">
+                                <span class="text-green-500">↑ 5%</span>
+                                <span class="text-gray-500">vs mois dernier</span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-red-100 rounded-xl">
+                            <heroicon-outline-user-group class="w-8 h-8 text-ecole-red" />
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 rounded-full">
+                        <div class="w-4/5 h-full bg-gradient-to-r from-ecole-red to-orange-400 rounded-full"></div>
+                    </div>
+                </div>
+        
+                <!-- Carte Présence -->
+                <div class="bg-white/80 backdrop-blur-sm border-b border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-500 text-sm">Nombre de proffesseur</p>
+                            <p class="text-3xl font-bold mt-2" id="prof-conts">0</p>
+                            <div class="flex items-center gap-1 mt-3 text-sm">
+                                <span class="text-red-500">↓ 1.2%</span>
+                                <span class="text-gray-500">vs semaine dernière</span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-red-100 rounded-xl">
+                            <heroicon-outline-presentation-chart-line class="w-8 h-8 text-ecole-red" />
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 rounded-full">
+                        <div class="w-11/12 h-full bg-gradient-to-r from-ecole-red to-purple-400 rounded-full"></div>
+                    </div>
+                </div>
+        
+                <!-- Carte Événements -->
+                <div class="bg-white/80 backdrop-blur-sm border-b border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-500 text-sm">Classe actif</p>
+                            <p class="text-3xl font-bold mt-2" id="classe-count">0</p>
+                            <div class="mt-3 text-sm text-gray-500">
+                                Prochain : Réunion pédagogique
+                            </div>
+                        </div>
+                        <div class="p-3 bg-red-100 rounded-xl">
+                            <heroicon-outline-calendar class="w-8 h-8 text-ecole-red" />
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-2 text-ecole-red hover:text-red-700 cursor-pointer">
+                        <span>Voir les classes</span>
+                        <heroicon-outline-arrow-right class="w-4 h-4" />
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Graphique et Activités -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Graphique -->
+                <div class="bg-white/80 backdrop-blur-sm border-b border-gray-100 p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-semibold">Évolution des absences</h3>
+                        <div class="flex gap-2">
+                            <button class="text-sm px-3 py-1 rounded-lg bg-red-50 text-ecole-red">Mensuel</button>
+                            <button class="text-sm px-3 py-1 rounded-lg hover:bg-gray-100">Annuel</button>
+                        </div>
+                    </div>
+                    <div 
+                        x-data="{
+                            chart: null,
+                            init() {
+                                this.chart = new ApexCharts(this.$refs.chart, {
+                                    chart: { 
+                                        type: 'line', 
+                                        height: 300,
+                                        toolbar: { show: false }
+                                    },
+                                    colors: ['#DC2626'],
+                                    series: [{
+                                        name: 'Présences',
+                                        data: [30, 40, 35, 50, 49, 60, 70]
+                                    }],
+                                    stroke: { curve: 'smooth', width: 3 },
+                                    markers: { size: 5 },
+                                    xaxis: {
+                                        categories: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul']
+                                    },
+                                    grid: { borderColor: '#F3F4F6' },
+                                    tooltip: { theme: 'light' }
+                                });
+                                this.chart.render();
+                            }
+                        }"
+                        class="h-[300px]"
+                        ref="chart"
+                    ></div>
+                </div>
+        
+                <!-- Dernières activités -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-semibold mb-6">Activités récentes</h3>
+                    <div class="space-y-6">
+                        <!-- Activité 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <heroicon-outline-check-circle class="w-5 h-5 text-green-600" />
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium">Nouvelle évaluation ajoutée</p>
+                                <p class="text-sm text-gray-500 mt-1">Mathématiques - Terminale A</p>
+                                <p class="text-xs text-gray-400 mt-2">Il y a 2 heures</p>
+                            </div>
+                        </div>
+        
+                        <!-- Activité 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <heroicon-outline-user-plus class="w-5 h-5 text-blue-600" />
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium">Nouvel étudiant inscrit</p>
+                                <p class="text-sm text-gray-500 mt-1">Aminata Diop - Terminale B</p>
+                                <p class="text-xs text-gray-400 mt-2">Il y a 5 heures</p>
+                            </div>
+                        </div>
+        
+                        <!-- Bouton Voir plus -->
+                        <button class="w-full mt-4 text-ecole-red hover:text-red-700 flex items-center justify-center gap-2">
+                            <span>Voir toutes les activités</span>
+                            <heroicon-outline-arrow-down class="w-4 h-4" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+      </div>
+    
+    </div>
+  
+    <script src="../../../js/components/sidebar.js"></script>
+    <script src="../../../js/components/headerRp.js" type="module"></script>
+    <script src="../../../js/rp/dashboard.js" type="module"></script>
+  </body>
+  
+</html>
