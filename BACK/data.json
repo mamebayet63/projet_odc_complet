@@ -104,101 +104,63 @@
       "lastName": "Niass"
     }
   ],
-  "classes": [
+  "promotions": [
     {
       "id": "1",
-      "name": "L1 Info",
-      "id_filiere": "2",
-      "niveau": "L1",
-      "etat": "actif"
-    },
-    {
-      "id": "9674",
-      "name": "new",
-      "niveau": "L1",
-      "id_filiere": 1,
-      "etat": "actif"
-    },
-    {
-      "id": "dae0",
-      "name": "new 2",
-      "niveau": "L1",
-      "id_filiere": "1",
-      "etat": "actif"
-    },
-    {
-      "id": "3777",
-      "name": "new 45",
-      "niveau": "L2",
-      "id_filiere": "1",
-      "etat": "actif"
-    },
-    {
-      "id": "0bb9",
-      "name": "test",
-      "niveau": "L1",
-      "id_filiere": "1",
-      "etat": "actif"
-    }
-  ],
-  "filiere": [
-    {
-      "id": "1",
-      "libelle": "Filière 1",
-      "etat": "actif"
+      "nom": "Promo 2024",
+      "apprenants": 24,
+      "referentiels": [
+        1,
+        2
+      ],
+      "date_debut": "2024-03-01",
+      "date_fin": "2024-08-30",
+      "coverPhoto": "https://img.freepik.com/free-photo/study-group-african-people_23-2149156390.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740",
+      "statut": "Actif"
     },
     {
       "id": "2",
-      "libelle": "Filière 2",
-      "etat": "actif"
+      "nom": "Promo 2023",
+      "apprenants": 18,
+      "referentiels": [
+        3,
+        4
+      ],
+      "date_debut": "2024-03-01",
+      "date_fin": "2024-08-30",
+      "coverPhoto": "https://img.freepik.com/free-photo/college-students-different-ethnicities-cramming_23-2149891370.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740",
+      "statut": "desactif"
+    },
+    {
+      "nom": "promo modifier",
+      "apprenants": 32,
+      "referentiels": [
+        1,
+        2
+      ],
+      "date_debut": "2025-05-18",
+      "date_fin": "2025-05-23",
+      "coverPhoto": "https://img.freepik.com/free-vector/flat-background-world-teacher-s-day-celebration_23-2150736746.jpg?uid=R128466424&ga=GA1.1.810359603.1727369869&semt=ais_hybrid&w=740",
+      "statut": "desactif",
+      "id": "0be9"
     }
   ],
-  "inscription": [
+  "referentiels": [
     {
       "id": "1",
-      "id_etudiant": "2",
-      "id_classe": "1",
-      "annee": "2025",
-      "date_inscription": "31/03/2025",
-      "etat": "actif"
-    }
-  ],
-  "courses": [
+      "nom": "Dév/Web"
+    },
     {
-      "id": "1",
-      "id_module": 1,
-      "date": "2025-04-20",
-      "heure_debut": "10:00",
-      "heure_fin": "12:00",
-      "proffesseur_id": 1,
-      "salle": "sale B12",
-      "semestre": "S1",
-      "etat": "actif"
-    }
-  ],
-  "absences": [
+      "id": "2",
+      "nom": "Data Analyse"
+    },
     {
-      "id": "1",
-      "studentId": 1,
-      "date": "2025-05-01",
-      "courseId": 1,
-      "justified": false
-    }
-  ],
-  "justifications": [
+      "id": "3",
+      "nom": "Marketing"
+    },
     {
-      "id": "1",
-      "absenceId": 1,
-      "reason": "Maladie",
-      "validatedBy": "2"
-    }
-  ],
-  "modules": [
-    {
-      "id": "1",
-      "libelle": "Module 1",
-      "id_filiere": 1,
-      "etat": "actif"
+      "id": "4",
+      "nom": "Finance"
     }
   ]
 }

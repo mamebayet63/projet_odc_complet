@@ -1,68 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connexion - École 221</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - École</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .background-image {
+            background-image: url('./assets/WhatsApp\ Image\ 2025-05-16\ à\ 15.14.06_b8c4df7b.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .beige-bg {
+            background-color: rgba(255, 255, 244, 0.96);
+        }
+
+        @keyframes fade-in-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out;
+        }
+    </style>
 </head>
-<body class="bg-red-50 min-h-screen flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 space-y-6">
-    <!-- En-tête -->
-    <div class="text-center space-y-2">
-      <div class="mx-auto bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-        221
-      </div>
-      <h1 class="text-3xl font-bold text-red-600 mt-4">École 221</h1>
-      <p class="text-gray-600">Portail de connexion étudiant</p>
+<body class="">
+    <div class="min-h-screen flex items-center justify-center background-image ">
+        <!-- Overlay sombre -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        
+        <!-- Carte de connexion -->
+<div class="beige-bg w-full md:w-[400px] border-l-8 border-b-4 border-r-8 
+            border-l-[#b89a52] border-b-[#b89a52] border-r-red-600
+            flex flex-col py-10 px-5 relative rounded-2xl shadow-2xl 
+            animate-fade-in-up z-50">
+            <!-- Bordure gauche animée -->
+            <!-- <div class="absolute right-0 top-0 h-full w-2 bg-red-600 rounded-r-3xl"></div> -->
+            <!-- <div class="absolute left-0 top-0 h-full w-2 bg-[#b89a52] rounded-l-[200px]"></div> -->
+            <!-- <div class="absolute left-0 bottom-0 h-2 flex  w-[390px] bg-[#b89a52] rounded-b-3xl"></div> -->
+            
+            <!-- Logo amélioré -->
+            <div class="flex justify-between items-center">
+                <h2 class="text-gray-800 text-lg font-semibold">
+                Bienvenue sur <span class="text-red-700 font-bold">ECOLE 221</span><br/>
+                <span class="text-2xl font-bold">Se connecter</span>
+                </h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAACJVBMVEX////KFRz+//18aGfOFBrBDRjIFxvLFRz9///8//v5+v34/////f9uSETHAAC/AAC5AAByNTP3+vTMAAB+RkT/+v//9Pz0//+1AAC9AADHFh7WkInQEh53REP///rXnZzMABDGAA2JAADSAADz5uS4CgrBABO6fki8GBjdx6j///H49fLGMyDJFxTGTC2+AAmlAAC+WUXCXzrBcjm3QybGQCq8KB/79eG9jnO4Oh7e0qTEVDPr1cBkAADy//OdAAB3AADPgoHqw7/JXmF+enm+TDnmmH3KSTzNmG7Qupi1knLNiXm8ZUW+moPOqpflxrbWsX/g1LLCvYq4dVLFxKbW3L/SmYbowpnTxaDp78W/MC+1XjDLwprY1afNpm+5qnbRw6zEfWrWv5DLwom/iUGvfjDbp33w7tG4oG3esZLObVfAt5DBrH3J1Ljj16PUNynbf1zz1sC5TxvEyJi9RD7HiWa4Wj60jE3Ya0nZUzS+Xy66n2S9Mgq1kD+rSSOwZT+ybi22hk+pbFG4aCXEfjfBoVSnTiDy7cS8tnXXmni1OQC0ThCqQyqriEnXkGLNTx22kF3m+dfKcDKjaDCzZVTDq5zVXVuioqGgdz6+wcHZ3t56IiW9gSqnczHNEC/XeWl5WmPQ5N9VIBnvs5GJdHNlaV9OPDC6tbqQjo2ctrSnDB1VLiZiQyOMh2WPORtaQT3rubbVl6TbdX7RRFXCgIv62eG7Q08QU2H9AAAbXklEQVR4nO1dDXvTVpaWhawPS8gee42di8aRE8tWbNlJLEuKkBNIgjfQJHZMWpPGgZIUasJ0N5BJoBUmMUPaDjMt7SwUFmZTOt3ZLUN3F5Yu/X175SQ0OEAz+1G7ffQCeWRF1899dc895z3nXgkEsWHDhg0bNmzYsGHDhg0bNmzYsGHDhg0bNmzYsGHDhg0bNmzYsGHDho3dAP3x0GyqNn6icB3e8+PhcDMYen/h3A1ETuSFcE6MPjtDOOEHYleNtxDd66KawRDDktgugAf/Vu3KbT/DwZPcbpo+Q5MY4gS+CzhHjhx9LTsqPLsYCNKYKnK7afsMTWLo4AjC8YPApOJ4V77QluTgB4IDgB+bmFMx7odbPgNBNIkhIPAfZsh1TxwtFo9q08lkva+O6NiBY3Mitot7s41iKzMkkpPF4uvFN0ptSXgxBjhpbubonODAfj4MheMzU5WprjenARxATATluRMzE90AcxCYA7QwQ2q3DB3RyRNTM9mpXx/34HAWYsLJt+amujwODAdqFOOAkwC7uE0tzTA89vbU1JSWffO6myM4LP323G+1iIDxysL0iKKmJM7RqgwTu2MIsNzMgVMn9jF0YjbsdHQfOTb3upe63Z2MKU4CI1Jpxy4ccjMYotYYYru4/Q5uZW5q6kSERMmBUQ+nTszMaAjV7nbG5IyqpGOycxdxo6UZ4pz01ttvTxXjCMoMFERlYqYYItFIFZw+HYudPn3GFH/yDEH4neLUsbenEgjlRytn3z6qkWRoQBFUVVQUSVLwHybY2gxhhMjNFN84VTzhRSiS0d6a85JoSKuem58/tyFrd0GxpRk6MELtOzYzM/Urrd6s8m6cROKvdVHI3/19Wd2N7Gt1hgTnxBZOdL09dSALm4VI8o1jkeyvNJqiIpOywu/GRlucIaSIua8fm3l9Ko6QCBMnQ9qpbMgFDTXncwLHz4EhvCZ88c2pYvFUNuF1hUKQJ0KiXqaPhYnUrr6g5RlaUV88cKpYnDpV8YbqZTOKDGRhwrjrDKr1GYqs5/yvsjOV1zUY+WHrEKrl+F3r7lZnSDjwsPi353o8Y68dLZ7SKCqEMqQ26XM6dk+xpRniONbWOz9TvFC6VdT+TkMZv5+MF3JtuyXX+gxhSnj9wInXs3QAYWC7uKZ1lUY8Yf7nxFAYL556Iw5NM5GdHx0bEdzuKOzz7sLET4Eh4HNa5I2iVwtkV4LhcBh6UAJwGG/lvbuu1TSJ4d/sTtMA5+KRude1X1eWWAxmuwQ8gYlOwAGu5T3N7hhiOPhCEOZHly+2ARxYnBb0seoCPC8lWz0e7o4h4JI44AQfBoCkYklJAcaljKkLKV1WOQ7sJrNocYaWXTp4YaX6XnnsfdnI4FHzjJkxcrL8vqIQgNhVdtHaDKE26/4wdvLy3JJQrkpG2Thz5bSxoMf0RdlIcuCnzxDHCTV9cmX1nbmjx7PzH+isfubKoiDIRtnshu4GGm/rVqJ2OQ8xKV2ejN3IKLX12syF8XzXiWLX/NlY2RSNFB41TNViaVXAgQO8zLm2NEMimZ42r8aSObVWZj1ZNJ6PrR7Jz10+XUubGby8bqYlsKFQMYJ4Wam/lRkSAKRM6FkwJ2boN8ufvfkbN8jI186cWV8vZzw3bhojosh5whY1zOl82de1MkMHeH/FkFXT/DStKimzevxcGO8Mq/L6tWtrRtqMRfX1shlblUSOwxcU/iVzsqUZ4lFFX1QWPzREQllR2m5lxbaekWldT5k3edVcu2revHLm6nI5Bj1Oj6HgL56JLc0QpoeiIiogiqnvXaqy3ZXSueyAdiRd1sudomFe+SA7c3JZlczkgmqYNUORWokh/kMMrd9CmQ3SYjemqFhm+UC+Nq5dzqJk1801XRVxZ9lcLs5PzMzJsvyhlLpSKysvHMTmMKR/+RxDwmktB259BkmQFDc+YkQ0ZRgpEf4w0mc/OqvN94xSTzP66VUFnrml9XrUz6bmg4u1K3JGSaUWXnTTWoIhhnNJJ77lKYDESSnMim/AOZJOiUkoZlbNanX53WrhjRt9yGQnZq4tcCo7XvAosb//7WfXr35wuibHDENpXYYwLCw4N5fbCNHg1FSSq48hLgJuZFK+kpFjtbdmfbe0310f0CZ1p6BLuLuU//3UR7myfLbr45uxbn1Nf+ECf/MZwiNMFQ3oUHDcQWAYEI2oKuuqCkUpgYlRTKndrMV6zl2aG4t6tLMVP1mRZTOlBEva5U8Sc0rmqj4f+1TAQO87ClRxO/KN5jMkMMKZNg1Dj/K4qD7klXL6/XVTSUk4wIVU7EgyHbvxwSWzbbJylPUUvchAQtP1TDlTKp78pHghMxY7/emxXgdI6cpvq1Ja3zmGv2w6Q3FBVa6Va+ZFw3hfSmVEPrO+BoM4NN0FY6V86YPLY7z62WVhKRufzFKRZWn0D4Kb98x+9Nm1oxeqTh7G/LSR4pO5sZNGTdyp3ZrF0NLLlkUBDh8R5HT52pmUyAOnQ4RuRZHKMVWFnQvjirF45caEfr5WyfesRgZQWpsd1vxaoa+gnU3ntYvdbLfpvCHcEKcl/mRZV9RpAO2c2F7xbx5DmL0TPE/gvPq+KdfSNVlaEIHkwKSynFopl2OmAICYUUVZ7z1pXDwaz/bFyVAg4rXaIyTirRQrxY8q89Mpp6rL6TSvnnTL16q6mlGIJNimw7FmMUyqSkY2cNgfAg7bmZvltPQxJhlSKr2iixkzZS6aEsYbsrmu91w6OVYthSgSPRX/uIjQJMqgF3KCIIjTTx7Pu0fG/kHGBfe5s7PjcxMTMUl9H+O3OZymMcRESZLLcs1wSqYsl9cWdX5lRYBx/MOUItcWowDclFevmivmNUP+9OwRc3G5gmgH542RQogMuZBbPoLgPUGf+zR0O92yxM5WCqXJ3rHeyVTaUPVt+q1ZDAkMf2+9JpdTKRVkUnqPbBjmmpyRLyqKuV6r6ZxqSDx/JNetSEqqe+mjTKr8SahSGp8IzmoDfoos6IJ4rtg1Kyira2eMleuF4lWdlWSFjxpr5ZSkNN/TQDejr8XWyyumzqtG+Z9jQjSqq9KVRcWomemUvCaFR3T1uKQmk5LEg6yip8qhAB2iKid6y6EQHTl6oZKdnX7nOlu9spiraH3Vk9fPrku8U0nrUNHxXNMZQo22cGkiaBqmWRY7c5Wx8+fltbUPykZM13NYJr1YHsu8NzEVUzkAgGKeFhTDnA+5BiKzAt8ToeMTp2OfBdlg8EZZlj2FyIj77FF5IpfMKDE5E04qorPJDKm9UQID6fz91/qWY3JVPaf1BvXYaiZWq+qQMVQ1XNj4pHY5JvGWxJbdY6OeZCZPugLZqltguxBUy+8vji7Nl17XEpFT2eG22Qlo7fDSmOQxDcADzipj1UMG8Ysm7E0k0T3hJAwLWa1YqMS9U/LpqfhQ6UiP/AH0OWWYvsPkL2XErlxKpU0lGk7pXHd28laEjGQTVKSw//7n1neQlHeACSEDpIYM9KofpQUulRHEsogRhhO3chPOUa/9Q4b0j88QOQzHUJFHLrpZz1gpqy1Vb8+euPBuudrtEMuKWNZTsil1X7pcFZKpdErXVc94aIAuBIOfDTCBgYqGwoiBMCQykF/VyFJuNjM/E8YdaYlLrUH5F1YMHsOc4katsUkMHzhxXBVAGBcJoP/+XW1y8vTJy5WCGo2moQ81zZVMlONScwoAeFqOnaldO4qcOCfyzmuFgP9objJOxcdH89murtXzx7Tl2VLfAR1gnKHwqlwzU3padIowXQT1bAUqb/JHZ4ggd8SkgyAUQ5GMT6eNtvGBypRZHQtFjOoaDP1pEcMwEbhfK3h8gmgsz525lNBWUyKn6+0Bat4X7GICJbc7GOz9w+uX/zEbQr1Hq2HA/25sRBTKC/qZxUxZzuACjPpwLjr3ME3YI4zcPZjkRC65sg7TJF0BbIE6lS9ESGrgsq6mZH0kJWIcltNC2UvL18ekf5zIFm93L5p6OpjRAlnVdy5E59neUuk3xcpbRWuEqAs5zzktHj+uq1D0pY2MaYh8PXFxOP+MNIPhvQ6Cwzko3DIgvWbovK4hZEgrfZxHRqtlWZKM9GrNrOUTZPZmEWEibxR7PG08KJ+Ra2eRUEFXNWR8eYAkkYRXC1mzjEG0bLzUu/puNjvJOqNOIxUVQZ0hEB8gXubHZ5j4I0ZA6R1+L5lMqaophm915ZfLSmp1QBsTQCqT0004n4JyV1yjSXKATuT3z46ZMpSytUggcDyoubzefd5TMLIiDBPStGwhQpeCY4Vs4aMczEh4RSfqzyzgHN7zdVPGENnLWW4AV6DY5vg0LypVdxgapjsfiOQERVo5rSupoLKy2IeEugokGUKQeMXUHWmzNk6T+T4vVDd0JJjWGJJE84KPbfs4kT1RmK96Lq5mjAWgJjcLCFyy414z+CHInnpZBndaj7+oshyTdUl0AOAcyZJZoKTXrp4Xw+n1xXSi8lmPOq+RJIPEM2GwADWZRlIhBiEDlXRmPhQKUFkPrzowZX6MdQeNRXe6LCnQU20yJPg/RprhSqEzFayyEe4AhEMykmVB1I2YbCphXs1To1XZ7O49H5z45Gz21NQ/AcIzXYJpITLuS6pGujqFeF007HUkDy3Ymz837eZ5t1rtcQMYemRjXZ5WcG6zdAoAvxf58cOhhbsdfN0TwH8pJamYMIOS166cnFSDXUipW1J5j/maplGlclGH8oRvu6gxTAXegKTYNo5QFEKF/NBy/aT31PK5XG+pmNW0eRU6ljLU8UbUuTWGjqSzKQ/nQQT6t+oMXEbhOExNw0FNrpw8+S5SCfJh/erEuMbQQwePlNwEjGlY52/iLrSitHW6ezWSCZGUxsTjpB+KNxINIVpfMHZ/fFICwEhyC2UjJW4VgYiDd5vEEHn0rBPSAoGJaZwAIo65L2pI/HrQ0KsXT3kZ6lTsrUk+CRwYewtGBT+S7St1aQjNoGT2XSQU0eIoSg0MUMWaKZczqjotqQYQUxKf3ErxMdCfaA4/lLzTg23sNMAxwtLHBI7xXLKtQMf9A7NH+uazGsVQpNfbF+S/4HtKcTqhUQGrqYshQyQ6OY4cXbv0SSFBF3rvr8hr15LK+jU9pYhQ76ow4dq6fc69zfEzMLu414E17qXAgG8s7oJTDKFD1kV+v3UvhkZYtUD6td6e9i2fgVLxagmdLR/54I0Z5Jw7HJZvLpTN7owCXReOqdueVeEO3mkOQciQ/oWz8YkXTPR10ZGuOO33uuJaNhKwpEgoELl1EVI6x6pd1KY2QVGtrxC/KAir2VV6zKOkDVOPymZOJwgM6rRtNVOs/0/NY3hYwBsYEpx0odgbvK9B5zHzbvmgtUEfodBQ4hQamo22zZNbBkf6AyGUPvJPk3NTv5vfNxHTw8Frv8/IpgpwBwe47xfZCOFLqgmKrd5HEkpTKKmeZ+gQhTae4PWC9+ilXx8fncrHvRuXh0Y9Dvd8ftS7+fqAEMNQMN0PzlaOpA8g88GR0sA7GUV1NFo93nEXadY8JBHXI76hBg+HlIADoErVsdq1D+fflNfPapRV/iWzQR53iG5Pdqs9HeoazSnKtWOT6s2slvUOJCq3d26NxpK/8JKh5jC0KD7oaWQIfY+YTJ2GUN19B8aWr5+sadYQMPGC7sBwInx/szVDZ3vcvEOs3kizqYuT98+Va333ReL53XwEwB8+gKGlSQyh8dzrb9h6hwFOtIpJuhgrt8McoVu/0XNfoxmYPyDzboBhSZhTMBuNC27LJDmppujpMOY05LJENHwdAZyH7iFk0xhC7GkYQ8DhZZV3l2Oxt4p/uHopJtdOlvrOxjVrMobS1m4Sd2ljTCgkz1orO0BJleX0goqZtZi0Y1ctJv65iews3DvUYFZ8SvDMFrVKJQGDgyjp40hA0zTaCot00WM96JVJ1D8hyK2w1SCJTy9UM2XOaZ4xlUaGBHGoWaFiExT5S/G5PhFJd1+2WMqp6vmcE/DBJW98rK1thbIS2DhynSVwvjdheX+UGagv2VsrOaqSiqVEZf296A6GcAib++oWirnbQTzbXUhY27qPHNc9YSjgolGMEAoa3aV71D7SUjKkS8uFYcSgUeuTS1O5zVaKFC5L6ahRTjm2h3oCcHAWMs1lGCLpX4p88tmswbrPLws8xgGCw2DGNwZzIzIe0VC/pZ3pfXShh9O1AGM5V7Lg2dq4gWFA9WVSQJGV5zwNxh98QDaZIVSZdw896xXABCPNYyLgOM6p3r81mw1k8/Pz84WhSn0MIbG+YAn11zUKWfJtxT4AOIcTVzFMFLdvTwSY+JWryUZq+XzyWQ4FHaMq8fWQhuFt+XilK5t3u92sm23LJUIh63Yw2koEpoZWS+o+v9kOw2HaxcHWTm77o+sEwKCcYZqkZ7aBvHcI+76rm71L4iA+GvSFRa5OPylsKhk0kB3YbBfPRX/gzRG8+mWzSD0Hkvzzw2eDyG0eJflprYrVl1bqY8uW0I2H1lzkltVpgvNVDDkCx/vvNTPUP0OISXwFszliY0LVCzcwz5/uK7qhvLGszxpb/qJWp4YyoS2rK7CvZIhxRMedZknuBpDI1x0c/n1vCUcy11UpGFH82XYbwtGm+RtquqNO/lXPzBDYwz1IazBkoC/48uD23hLCP8/3BkXHs+y4rtUCDRZ3K/pKhpzQ72oRhlYM8PZv7yymqm6eA9/PSuu9OzmqYYHs1WNIgEN3rSJck0g9B6sX5NcdVpTf7B1wWDua8O8LHFbdWNAaQve8G3/ZPAQwxTj4AGkNfhtgkD8f5LFXGR1wZxvaFNzgZQwxkRD+JeBvIYIwLAceqa+Obuyp0PM9znqIl1xKQBf8r/v8ZHMq+S8GyZD3+nGrtPjSR9HYfEMpIiK8mCGwzP2beyTVrPrTS3H3EA5e/rAd0ZZvEJia8pJ4iDux/iatpr0SIfpOB5Z86UsEdjKM976YIed09N+lm623XwBoqIc7sJe+TmcnQ++tF+pSKIj6vyZb8Y2llhvZc5AXsRc/noWz+QbnT46yO5wvbI0n+79uesb0UlB7DmIO9YVTEWcLDQIFLbE7LRTAOXiHbFmCCB3Y+xC8+G16FsPngebdjc6UADjR36RNCbsDgwQeHcQAVGs7xhGwjRGfLDQwBJiTIFrZRDeQeNTDiWDnYyE7NQ1SbJyHMNPvv9tKQubFcMG5mAQ7XepOhhXP8wwx3PnNPcTfjE7/NWBoygoaO+UKW2m8VBOfY0jgPY/uIUirCZmdgFb2oMOq2DzvcPCk1nCh37tNyeJOjjj4L/voFskIfxB/OYRhDZkGrmrPjw7pik9vqwtgyUMPAvta3Mk8A4rc/ephw2t0sUzc9Vz/n2eIif13EX8LVA53iRByb+9DAt+uw/letIEhGa+vWxAcB3BOhD6Gppu3TvjXA6UPHwL8Nh3O30Kf7z4KGVrPTVkzlug43PIutBHQ3r7+6uA2Q+VnG9JDkqkzdIAkDy20RSoyfwVIhiH/9GXH95E/vNygxUi/tuFL+Y5HTV7l/V/gzh/FJLax+MaWGuMAoyWdgEsK/Q+a07n/C9DIn/Z0AKzuVdn8jg2UWZbjxYd7//QTCPIvA0ky9F/6H1rLNYS70MCQZPI+XOy/QzOtmO3uDtAqaT/iPXzICf0lW9juS0iUItFl36Ev7yEhulmbZf7vcHdvB8d7svV5iKKoRSiEkki246uv/T8RkfZqQA53vznoyaIby8Cotf0Sssz+2+FAq5Tt/5fwwwkYuNP/ef2ZikhfV9w6qf37o3shFGqYnwPDDSTu/PvnWW/WaHNXZwva5//atH3N/49I3PnmP6phgufYjm/ueH9Gg7cJKyQM/OVRhxM/+Mc7AahKm92h/zFImqEYame1DIWcoPa+t+fRgwDS6sWmV8Lvski+Ioi7fsTO/L+ADkQikX0vrenC6PDTtU8LsP+PPT2jiRensqi16L/jNxtT0oqMG/+/GolaFo205K2AWgwZCgaHrK3rL/o9RZN0oPGhbAYmWpCZCw1Z600ohbqYUIhioD5owdI3A8fh68cROBFffPvJxOPHkYZ1M0ud1/fxQUbMxg5GmnZtWHOLDSLsqn9w8An8AxF54QI1GfH4BskdY1gYXJpe2v8UHkf2fze9NDiEBv7T+pL/DPwI3f4rAG/5vjaehfD5PEMB6FDr9keSFDRZSB+lSTLSxg+SZIghUevExg5Fqt3j8/k6WWGIHFJZX6evU2gPLPnYTnZ/q40hZOjhp62b/2QwEvD7A1BYBxA/XRem8K/fVWcIMyrrQXwkAH2OVQCOiD5hcP9StPO7xHedweH9w92cEGkfHA6H9zebUgNIhtwX5L+zDgM06Q949097hG8fU35yoL1+NODfZBgYeiJ6puFdqG+wIf3/9RT+mO4WImT7YySADIfbhkhyiG1NhsnvNj64ApEllnWzrGcwEPnWzba5fe7hxCbDxz2dbrevczqysWUf3gKK8X7rBAnodCiUfMK7n1KtyBDOtX0ebHr49u3b3w4h3mE+PDzUPs0O+wdZ/rvHj5c4dzsSaescRPZ1d04PRR473cOBzSIp4yLbBd+w9R1M4Cno/iJBQ4ZsKzJs40UfdDWez5GIr/s2EwhEhgYioHsaZhIJkPwCtRiS7Z62QmDfwKDbvfX4Mko+ZpPJCGJt/X+qsmwBoVqVYZCfbod48hQpsGw7Xd9L+tQDLRNK8WE+mIi0sYPIII9xznC3GH627k22u3nxaZ3ukBgOPiZdLcmwPg/D35H1kI0MuX2QIeUP0JEw+yTgdwW+7XZvMRSGRwcHR0cHIxvhwt/uDk8PBRgyRA+JPs9jimFa0krrDH3f1f/3XgqNgLbpSAAZehJJTLPq0wA9FO1cglYKI/6QLzoI70HkKVnfU8vQgyw2HYGR30UN8YJYQGja35pjuBEPh+t4HBhku9XZYZadTrQHMXHwvoBBvVpn6FqCfnVwUNUjtKV84JUivzS8tLT0eIhV+S+Gby8tDcLRbFGGliaBAgVa6MCTNrbT5xaH4Bh54BEbbIeaxgM9DRlZClpXOYesaEGGcp2dbp8Phpb97e7OuiZih+OQoa/lGEJd2r6Fp/DTUPuTJ+0REiqXC/UjmvF720uQFhTgg9aJQN23MI+fNbq3dTSEuiLwZ6upNhLZ2tQLcwuKcVkEaCtzqCcPUKfCYGedoBjaOkHDE5am2Vy6h/khPL3ZHt4s63OLMbT66NoAg1h5LgozWpjw+i0BXt/vzpB+2gVVOFovfVuq3GpGkf7NZvCCzSMXRbXogje5Cet4Iw3cGB5k6ye57XizlmNlglutvm+PtlpyaMOGDRs2bNiwYcOGDRs2bNiwYcOGDRs2bNiwYcOGDRs2bNiwYcOGjZ8G/hs3NTFD/viPvwAAAABJRU5ErkJggg==" 
+                                     class="w-10 h-10 rounded-xl object-cover border-2 border-red-100">
+            
+            </div>
+
+            <!-- Formulaire amélioré -->
+            <form class="space-y-3 mt-4 " id="login-form">
+                        <p id="login-error" class="text-red-600 text-sm text-center hidden">Email ou mot de passe incorrect.</p>
+                <!-- Champ Email -->
+                <div class="relative">
+                    <label class="block text-gray-600 mb-2 text-sm font-medium">Adresse email</label>
+                    <div class="relative">
+                        <input type="email" id="email"
+                               class="w-full pl-12 pr-4 py-2 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all"
+                               placeholder="exemple@ecole.com">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+                        </svg>
+                                <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer une adresse email valide.</p>
+                    </div>
+                </div>
+
+                <!-- Champ Mot de passe -->
+                <div class="relative">
+                    <label class="block text-gray-600 mb-2 text-sm font-medium">Mot de passe</label>
+                    <div class="relative">
+                        <input type="password" id="password"
+                               class="w-full pl-12 pr-4 py-2 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all"
+                               placeholder="••••••••">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                                <p id="password-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer votre mot de passe.</p>
+                    </div>
+                </div>
+
+                <!-- Mot de passe oublié -->
+                <div class="text-right">
+                    <a href="/frontend/public/views/modifPass.html" class="text-red-600 text-sm hover:underline font-medium transition-all">Mot de passe oublié ?</a>
+                </div>
+
+                <!-- Bouton amélioré -->
+                <button class="w-full bg-red-600 text-white py-4 rounded-xl hover:bg-red-700 transition-all flex items-center justify-center gap-2 group">
+                    <span class="font-semibold tracking-wide">Se connecter</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+
+               
+            </form>
+        </div>
     </div>
-
-    <!-- Formulaire -->
-    <form id="login-form" class="space-y-6">
-        <p id="login-error" class="text-red-600 text-sm text-center hidden">Email ou mot de passe incorrect.</p>
-
-      <div>
-        <label class="block text-gray-700 mb-2 font-medium" for="email">Adresse email</label>
-        <input 
-          type="email" 
-          id="email"
-          class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-200 transition"
-          placeholder="nom@ecole221.sn" />
-        <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer une adresse email valide.</p>
-      </div>
-
-      <div>
-        <label class="block text-gray-700 mb-2 font-medium" for="password">Mot de passe</label>
-        <input 
-          type="password" 
-          id="password"
-          class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-200 transition"
-          placeholder="••••••••" />
-        <p id="password-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer votre mot de passe.</p>
-      </div>
-
-
-      <button 
-        type="submit"
-        class="w-full bg-red-600 text-white py-3 px-4 rounded-lg hover:bg-red-700 transition-colors font-medium">
-        Se connecter
-      </button>
-    </form>
-
-    <!-- Liens supplémentaires -->
-    <div class="text-center space-y-2">
-      <a href="/frontend/public/views/modifPass.html" class="text-red-600 hover:text-red-700 text-sm font-medium">
-        Mot de passe oublié ?
-      </a>
-      <p class="text-gray-500 text-sm">
-        Pas encore de compte ? 
-        <a href="#" class="text-red-600 hover:text-red-700 font-medium">
-          S'inscrire
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <script src="../js/login/login.js"></script>
+    <script src="/frontend/js/login/login.js"></script>
 </body>
 </html>

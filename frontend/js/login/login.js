@@ -90,7 +90,7 @@ function enrichUser(user) {
 // Fonction de redirection selon le rôle
 function redirectByRole(role) {
   if (role === "rp") {
-    window.location.href = "./views/rp/dashboardRp.html";
+    window.location.href = "./views/promo/promo.html";
   } else if (role === "attache") {
     window.location.href = "attache.html";
   } else if (role === "student") {
